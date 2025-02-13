@@ -12,7 +12,7 @@
 </head>
 <body>
     <div class="container">
-      <div class="row justify-content-center">
+        <div class="row justify-content-center">
             <div class="col-md-8">
                 <div class="card mb-3">
                     <div class="card-body">
@@ -20,7 +20,9 @@
                         <p class="col-md-8 fs-4">Create a new blog post:</p>
                         <form method="post" enctype="multipart/form-data">  <!--enctype= Crucial when the form includes file uploads-->
                             {% csrf_token %}
-                            {{ form.as_p }}
+                            {{ form.as_p }}  <!-- This is where the form fields are rendered. 
+                                It takes the form object (passed from your Django view) and renders each field as a paragraph (<p>) element. 
+                                This includes labels, input fields, etc., based on how you defined the form in your Django forms.py-->
                             <button type="submit" class="btn btn-primary">Submit</button>
                         </form>
                     </div>
