@@ -18,7 +18,7 @@
                     <div class="card-body">
                         <h1 class="display-5 fw-bold">Blog</h1>
                         <p class="col-md-8 fs-4">Create a new blog post:</p>
-                        <form method="post" enctype="multipart/form-data">
+                        <form method="post" enctype="multipart/form-data">  <!--enctype= Crucial when the form includes file uploads-->
                             {% csrf_token %}
                             {{ form.as_p }}
                             <button type="submit" class="btn btn-primary">Submit</button>
