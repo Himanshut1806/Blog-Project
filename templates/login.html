@@ -1,0 +1,29 @@
+{% extends 'navbar.html' %}
+{% load static %}
+{% block body %}
+<div class="container my-3 p-3 rounded col-md-6 col-lg-4">
+    <div class="col">
+        <div class="card mb-6">
+            <div class="card-body">
+    <form method="POST" action="/login/">
+        {% csrf_token %}
+        <h4 class="mb-3 text-center">Login User</h4>
+        <div class="mb-3">
+            <label for="UserName1" class="form-label">Username*</label>
+            <input type="text" class="form-control" id="UserName1" name="UserName1" aria-describedby="Name1Help" required>
+        </div>
+        <div class="mb-3">
+            <label for="Password1" class="form-label">Password*</label>
+            <input type="password" class="form-control" id="Password1" name="Password1" required>
+        </div>
+        <div class="d-grid">
+            <button type="submit" class="btn btn-success" id="submitBtn">Login</button>
+        </div>
+    </div>
+</div>
+</div>
+    </form>
+</div>
+{% endblock %}
+
+

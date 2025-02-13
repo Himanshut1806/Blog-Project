@@ -1,0 +1,39 @@
+{% extends 'navbar.html' %}
+{% block body %}
+<div class="container my-3 p-3 rounded col-md-6 col-lg-4">
+    <form method="POST" action="/signup/">
+        {% csrf_token %}
+        <h4 class="mb-3 text-center">Signup Form</h4>
+        <div class="mb-3">
+            <label for="Name1" class="form-label">Name*</label>
+            <input type="text" class="form-control" id="Name1" name="Name1" aria-describedby="Name1Help" required>
+        </div>
+        <div class="mb-3">
+            <label for="Username1" class="form-label">UserName*</label>
+            <input type="text" class="form-control" id="Username1" name="Username1"
+                aria-describedby="Username1Help" required>
+        </div>
+        <div class="mb-3">
+            <label for="Email1" class="form-label">Email*</label>
+            <input type="email" class="form-control" id="Email1" name="Email1" aria-describedby="emailHelp" required>
+        </div>
+        <div class="mb-3">
+            <label for="Password1" class="form-label">Password*</label>
+            <input type="password" class="form-control" id="Password1" name="Password1" required>
+            <span id="pass" class="text-danger"></span>
+        </div>
+        <div class="mb-3">
+            <label for="Confirmpassword1" class="form-label">Confirm Password*</label>
+            <input type="password" class="form-control" id="Confirmpassword1" name="Confirmpassword1" required>
+        </div>
+        <div class="d-grid gap-2">
+            <button type="submit" class="btn btn-success" id="submitBtn">Signup</button>
+            <a href="/" class="btn btn-outline-secondary">Login</a>
+        </div>
+    </form>
+</div>
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"
+        integrity="sha384-YvpcrYf0tY3lHB60NNkmXc5s9fDVZLESaAA55NDzOxhy9GkcIdslK1eN7N6jIeHz"
+        crossorigin="anonymous"></script>
+{% endblock %}
+
