@@ -71,7 +71,7 @@ def user_login(request):
         if user is not None:
             login(request, user)
             messages.success(request, "Successfully Logged In")
-            return redirect('home') 
+            return redirect('home')
         else:
             messages.error(request, "Invalid Credentials")
             return render(request, 'login.html')
@@ -83,7 +83,7 @@ def edit(request, blog_id):
     else:
         blog = get_object_or_404(Blog, pk=blog_id, created_by=request.user)
     
-    if request.method == 'POST':
+    if request.method == 'POST': 
         form = BlogForm(request.POST, request.FILES, instance=blog) 
         if form.is_valid():
             form.save()
