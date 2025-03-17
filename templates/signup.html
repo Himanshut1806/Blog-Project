@@ -8,26 +8,26 @@
         {% csrf_token %}
         <h4 class="mb-3 text-center">Signup</h4>
         <div class="mb-3">
-            <label for="Name1" class="form-label">Name*</label>
-            <input type="text" class="form-control" id="Name1" name="Name1" aria-describedby="Name1Help" required>
+            <label for="Name1" class="form-label">Name:</label>
+            <input type="text" class="form-control" id="Name1" placeholder="Write Your Name Here...." name="Name1" aria-describedby="Name1Help" required>
         </div>
         <div class="mb-3">
-            <label for="Username1" class="form-label">UserName*</label>
-            <input type="text" class="form-control" id="Username1" name="Username1"
+            <label for="Username1" class="form-label">UserName:</label>
+            <input type="text" class="form-control" id="Username1" placeholder="Write your Username here...."  name="Username1"
                 aria-describedby="Username1Help" required>
         </div>
         <div class="mb-3">
-            <label for="Email1" class="form-label">Email*</label>
-            <input type="email" class="form-control" id="Email1" name="Email1" aria-describedby="emailHelp" required>
+            <label for="Email1" class="form-label">Email:</label>
+            <input type="email" class="form-control" placeholder="Write your Email here...." id="Email1" name="Email1" aria-describedby="emailHelp" required>
         </div>
         <div class="mb-3">
-            <label for="Password1" class="form-label">Password*</label>
-            <input type="password" class="form-control" id="Password1" name="Password1" required>
+            <label for="Password1" class="form-label">Password:</label>
+            <input type="password" class="form-control" placeholder="Password...." id="Password1" name="Password1" required>
             <span id="pass" class="text-danger"></span>
         </div>
         <div class="mb-3">
-            <label for="Confirmpassword1" class="form-label">Confirm Password*</label>
-            <input type="password" class="form-control" id="Confirmpassword1" name="Confirmpassword1" required>
+            <label for="Confirmpassword1" class="form-label">Confirm Password:</label>
+            <input type="password" class="form-control" placeholder="Confirm Password...."  id="Confirmpassword1" name="Confirmpassword1" required>
         </div>
         <div class="d-grid gap-2">
             <button type="submit" class="btn btn-success" id="submitBtn">Signup</button>
